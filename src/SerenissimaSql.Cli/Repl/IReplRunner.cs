@@ -1,4 +1,4 @@
-namespace SerenissimaSql.Repl;
+namespace SerenissimaSql.Cli.Repl;
 
 public interface IReplRunner
 {

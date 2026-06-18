@@ -1,9 +1,9 @@
 using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using SerenissimaSql.Cli;
+using SerenissimaSql.Cli.Repl;
+using SerenissimaSql.Cli.TestDb;
 using SerenissimaSql.Extensions;
-using SerenissimaSql.Repl;
-using SerenissimaSql.TestDb;
 
 Console.OutputEncoding = Encoding.UTF8;
 Console.InputEncoding = Encoding.UTF8;
@@ -33,7 +33,6 @@ services.AddSingleton<IReplRunner, ReplRunner>();
 
 await using var provider = services.BuildServiceProvider();
 
-// Seed dimostrativo solo per il demo SQLite con la connection di default.
 if (options.IsSqliteDemo)
 {
     await new SqliteDatabaseInitializer(options.ConnectionString).InitializeAsync();

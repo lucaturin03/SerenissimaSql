@@ -1,7 +1,7 @@
 using System.Data.Common;
 using Microsoft.Data.Sqlite;
 
-namespace SerenissimaSql.TestDb;
+namespace SerenissimaSql.Cli.TestDb;
 
 public sealed class SqliteDatabaseInitializer(string connectionString) : IDatabaseInitializer
 {
@@ -11,9 +11,7 @@ public sealed class SqliteDatabaseInitializer(string connectionString) : IDataba
         await conn.OpenAsync(ct).ConfigureAwait(false);
 
         await CreateDbAsync(conn, ct).ConfigureAwait(false);
-
-        // Seed only when the table is empty, so re-running the demo doesn't
-        // blow up on the fixed primary keys below.
+        
         if (await IsEmptyAsync(conn, ct).ConfigureAwait(false))
         {
             await SeedDbAsync(conn, ct).ConfigureAwait(false);

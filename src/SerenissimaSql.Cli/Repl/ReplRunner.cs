@@ -4,7 +4,7 @@ using SerenissimaSql.Exceptions;
 using SerenissimaSql.Extensions;
 using SerenissimaSql.Translator;
 
-namespace SerenissimaSql.Repl;
+namespace SerenissimaSql.Cli.Repl;
 
 public sealed class ReplRunner(IDbConnectionFactory connectionFactory, ISqlInterpreter interpreter) : IReplRunner
 {

@@ -8,10 +8,7 @@ public class SqlInterpreter : ISqlInterpreter
 {
     public async Task<SqlQueryResult> ExecuteQueryAsync(DbConnection conn, string query, CancellationToken ct = default)
     {
-        // Translate (and validate) before touching the DB: an invalid query
-        // must never open a connection.
         var sql = query.Translate();
-
         var scope = await ConnectionScope.OpenAsync(conn, ct).ConfigureAwait(false);
 
         DbCommand? cmd = null;

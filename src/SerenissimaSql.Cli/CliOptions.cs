@@ -7,8 +7,7 @@ public sealed class CliOptions
     public required string Provider { get; init; }
     public required string ConnectionString { get; init; }
     public required bool IsSqliteDemo { get; init; }
-
-    /// <summary>Ritorna null se va stampato l'help o se gli argomenti no i xe boni.</summary>
+    
     public static CliOptions? Parse(string[] args)
     {
         string? provider = null;

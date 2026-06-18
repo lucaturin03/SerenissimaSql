@@ -1,4 +1,4 @@
-namespace SerenissimaSql.TestDb;
+namespace SerenissimaSql.Cli.TestDb;
 
 public interface IDatabaseInitializer
 {

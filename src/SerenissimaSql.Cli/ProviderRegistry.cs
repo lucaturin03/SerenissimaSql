@@ -6,10 +6,6 @@ using Npgsql;
 
 namespace SerenissimaSql.Cli;
 
-/// <summary>
-/// Mappa i nomi di provider supportati dalla CLI alle relative <see cref="DbProviderFactory"/>.
-/// La library in sé è provider-agnostic: questo registro serve solo alla CLI demo.
-/// </summary>
 public static class ProviderRegistry
 {
     private static readonly Dictionary<string, DbProviderFactory> Factories =
