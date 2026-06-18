@@ -1,0 +1,21 @@
+## .NET
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+
+## Output pacchetti
+nupkg/
+*.nupkg
+*.snupkg
+
+## Rider / Visual Studio
+.vs/
+.idea/
+
+## Database demo SQLite
+serenissima.db
+*.db-shm
+*.db-wal

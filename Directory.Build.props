@@ -1,0 +1,28 @@
+<Project>
+
+    <!-- Impostazioni condivise da tutti i progetti della solution -->
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+
+    <!-- Metadata comuni (autore, licenza, repository) -->
+    <PropertyGroup>
+        <Authors>Luca Turin</Authors>
+        <Company>Luca Turin</Company>
+        <Copyright>Copyright © Luca Turin $([System.DateTime]::Now.Year)</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/lucaturin/SerenissimaSql</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/lucaturin/SerenissimaSql</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <!-- Build deterministica su CI -->
+    <PropertyGroup Condition="'$(ContinuousIntegrationBuild)' == ''">
+        <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+</Project>

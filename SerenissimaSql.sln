@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerenissimaSql", "src\SerenissimaSql\SerenissimaSql.csproj", "{8C73D624-2C23-4847-8268-839A0C3CB3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerenissimaSql.Cli", "src\SerenissimaSql.Cli\SerenissimaSql.Cli.csproj", "{BA515B84-2506-49AC-846B-6E50D94A1FBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Debug|x64.Build.0 = Debug|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Release|x64.ActiveCfg = Release|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Release|x64.Build.0 = Release|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C73D624-2C23-4847-8268-839A0C3CB3BC}.Release|x86.Build.0 = Release|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Debug|x64.Build.0 = Debug|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Debug|x86.Build.0 = Debug|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Release|x64.ActiveCfg = Release|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Release|x64.Build.0 = Release|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Release|x86.ActiveCfg = Release|Any CPU
+		{BA515B84-2506-49AC-846B-6E50D94A1FBE}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

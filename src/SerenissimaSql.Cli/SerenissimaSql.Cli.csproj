@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <AssemblyName>serenissima</AssemblyName>
+        <RootNamespace>SerenissimaSql.Cli</RootNamespace>
+        <IsPackable>true</IsPackable>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>serenissima</ToolCommandName>
+        <PackageId>SerenissimaSql.Cli</PackageId>
+        <Version>0.1.0</Version>
+        <Description>REPL da terminale per SerenissimaSql: scrivi query in dialetto Veneto contro qualsiasi database (SQLite, SQL Server, PostgreSQL, MySQL).</Description>
+        <PackageTags>sql;veneto;dialect;cli;dotnet-tool</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SerenissimaSql\SerenissimaSql.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0" />
+        <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.9" />
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+        <PackageReference Include="Npgsql" Version="9.0.2" />
+        <PackageReference Include="MySqlConnector" Version="2.4.0" />
+    </ItemGroup>
+
+</Project>
