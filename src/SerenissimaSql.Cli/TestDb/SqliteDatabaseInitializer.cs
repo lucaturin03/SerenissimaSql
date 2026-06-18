@@ -10,15 +10,22 @@ public sealed class SqliteDatabaseInitializer(string connectionString) : IDataba
         await using var conn = new SqliteConnection(connectionString);
         await conn.OpenAsync(ct).ConfigureAwait(false);
 
-        try
+        await CreateDbAsync(conn, ct).ConfigureAwait(false);
+
+        // Seed only when the table is empty, so re-running the demo doesn't
+        // blow up on the fixed primary keys below.
+        if (await IsEmptyAsync(conn, ct).ConfigureAwait(false))
         {
-            await CreateDbAsync(conn, ct).ConfigureAwait(false);
             await SeedDbAsync(conn, ct).ConfigureAwait(false);
         }
-        catch (Exception)
-        {
-            // Ignore
-        }
+    }
+
+    private static async Task<bool> IsEmptyAsync(DbConnection conn, CancellationToken ct = default)
+    {
+        await using var cmd = conn.CreateCommand();
+        cmd.CommandText = "SELECT COUNT(*) FROM utenti;";
+        var count = Convert.ToInt64(await cmd.ExecuteScalarAsync(ct).ConfigureAwait(false));
+        return count == 0;
     }
 
     private static async Task CreateDbAsync(DbConnection conn, CancellationToken ct = default)
